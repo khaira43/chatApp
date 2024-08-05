@@ -2,9 +2,9 @@ import 'package:chat/components/my_drawer.dart';
 import 'package:chat/services/auth/auth_service.dart';
 import 'package:chat/services/auth/chat/chat_service.dart';
 import 'package:flutter/material.dart';
-
 import '../components/user_tile.dart';
 import 'chat_page.dart';
+
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -56,6 +56,7 @@ class HomePage extends StatelessWidget {
             MaterialPageRoute(
               builder: (context) => ChatPage(
                 receiverEmail: userData["email"],
+                receiverID: userData["uid"],
               ),
             ),
           );
